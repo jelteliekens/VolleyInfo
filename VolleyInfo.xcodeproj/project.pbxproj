@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF0F0774184949ED00C4DF7E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */; };
+		EF0F077718494AC000C4DF7E /* FavorietePloegenCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */; };
+		EF0F07C418496ACB00C4DF7E /* Ploeg.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F07C318496ACB00C4DF7E /* Ploeg.m */; };
+		EF0F07C718496F2D00C4DF7E /* CategorienCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */; };
+		EF529FA618492035000E6394 /* VolleyInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FA518492035000E6394 /* VolleyInfoFetcher.m */; };
+		EF529FAC18492113000E6394 /* Categorie+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FAB18492113000E6394 /* Categorie+create.m */; };
+		EF529FAF184921C6000E6394 /* Ploeg+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FAE184921C6000E6394 /* Ploeg+create.m */; };
+		EF529FB2184925D9000E6394 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FB1184925D9000E6394 /* Categorie.m */; };
+		EF529FB5184925D9000E6394 /* Wedstrijd.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FB4184925D9000E6394 /* Wedstrijd.m */; };
+		EF5AEF9818423230002FE5D6 /* VolleyInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5AEF9618423230002FE5D6 /* VolleyInfo.xcdatamodeld */; };
+		EF7AEDCB1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */; };
+		EF7AEDCE184A373C000D1C9B /* KlassementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */; };
+		EF9731D7184943B700D1C21E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9731D6184943B700D1C21E /* CoreData.framework */; };
+		EFAF56361824232E00BD9972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56351824232E00BD9972 /* Foundation.framework */; };
+		EFAF56381824232E00BD9972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56371824232E00BD9972 /* CoreGraphics.framework */; };
+		EFAF563A1824232E00BD9972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56391824232E00BD9972 /* UIKit.framework */; };
+		EFAF56401824232E00BD9972 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFAF563E1824232E00BD9972 /* InfoPlist.strings */; };
+		EFAF56421824232E00BD9972 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAF56411824232E00BD9972 /* main.m */; };
+		EFAF56461824232E00BD9972 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAF56451824232E00BD9972 /* AppDelegate.m */; };
+		EFAF56491824232E00BD9972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAF56471824232E00BD9972 /* Main.storyboard */; };
+		EFAF564E1824232E00BD9972 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAF564D1824232E00BD9972 /* Images.xcassets */; };
+		EFAF56551824232E00BD9972 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56541824232E00BD9972 /* XCTest.framework */; };
+		EFAF56561824232E00BD9972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56351824232E00BD9972 /* Foundation.framework */; };
+		EFAF56571824232E00BD9972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56391824232E00BD9972 /* UIKit.framework */; };
+		EFAF565F1824232E00BD9972 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFAF565D1824232E00BD9972 /* InfoPlist.strings */; };
+		EFAF56611824232E00BD9972 /* VolleyInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAF56601824232E00BD9972 /* VolleyInfoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFAF56581824232E00BD9972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFAF562A1824232E00BD9972 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFAF56311824232E00BD9972;
+			remoteInfo = VolleyInfo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF0F0772184949ED00C4DF7E /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ../../../Downloads/Photomania/Photomania/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../../../Downloads/Photomania/Photomania/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		EF0F077518494AC000C4DF7E /* FavorietePloegenCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorietePloegenCDTVC.h; sourceTree = "<group>"; };
+		EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorietePloegenCDTVC.m; sourceTree = "<group>"; };
+		EF0F07C218496ACB00C4DF7E /* Ploeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ploeg.h; path = CoreData/Ploeg.h; sourceTree = "<group>"; };
+		EF0F07C318496ACB00C4DF7E /* Ploeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ploeg.m; path = CoreData/Ploeg.m; sourceTree = "<group>"; };
+		EF0F07C518496F2D00C4DF7E /* CategorienCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorienCDTVC.h; sourceTree = "<group>"; };
+		EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorienCDTVC.m; sourceTree = "<group>"; };
+		EF529FA418492035000E6394 /* VolleyInfoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyInfoFetcher.h; sourceTree = "<group>"; };
+		EF529FA518492035000E6394 /* VolleyInfoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyInfoFetcher.m; sourceTree = "<group>"; };
+		EF529FAA18492113000E6394 /* Categorie+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Categorie+create.h"; path = "CoreData/Categorie+create.h"; sourceTree = "<group>"; };
+		EF529FAB18492113000E6394 /* Categorie+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Categorie+create.m"; path = "CoreData/Categorie+create.m"; sourceTree = "<group>"; };
+		EF529FAD184921C6000E6394 /* Ploeg+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Ploeg+create.h"; path = "CoreData/Ploeg+create.h"; sourceTree = "<group>"; };
+		EF529FAE184921C6000E6394 /* Ploeg+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Ploeg+create.m"; path = "CoreData/Ploeg+create.m"; sourceTree = "<group>"; };
+		EF529FB0184925D9000E6394 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Categorie.h; path = CoreData/Categorie.h; sourceTree = "<group>"; };
+		EF529FB1184925D9000E6394 /* Categorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Categorie.m; path = CoreData/Categorie.m; sourceTree = "<group>"; };
+		EF529FB3184925D9000E6394 /* Wedstrijd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wedstrijd.h; path = CoreData/Wedstrijd.h; sourceTree = "<group>"; };
+		EF529FB4184925D9000E6394 /* Wedstrijd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wedstrijd.m; path = CoreData/Wedstrijd.m; sourceTree = "<group>"; };
+		EF5AEF9718423230002FE5D6 /* VolleyInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolleyInfo.xcdatamodel; sourceTree = "<group>"; };
+		EF7AEDC91849F49A000D1C9B /* PloegenVoorCategorieCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PloegenVoorCategorieCDTVC.h; sourceTree = "<group>"; };
+		EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PloegenVoorCategorieCDTVC.m; sourceTree = "<group>"; };
+		EF7AEDCC184A373C000D1C9B /* KlassementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlassementViewController.h; sourceTree = "<group>"; };
+		EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlassementViewController.m; sourceTree = "<group>"; };
+		EF9731D6184943B700D1C21E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EFAF56321824232E00BD9972 /* VolleyInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolleyInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAF56351824232E00BD9972 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFAF56371824232E00BD9972 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EFAF56391824232E00BD9972 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EFAF563D1824232E00BD9972 /* VolleyInfo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VolleyInfo-Info.plist"; sourceTree = "<group>"; };
+		EFAF563F1824232E00BD9972 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFAF56411824232E00BD9972 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFAF56431824232E00BD9972 /* VolleyInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VolleyInfo-Prefix.pch"; sourceTree = "<group>"; };
+		EFAF56441824232E00BD9972 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFAF56451824232E00BD9972 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFAF56481824232E00BD9972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFAF564D1824232E00BD9972 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EFAF56531824232E00BD9972 /* VolleyInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolleyInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAF56541824232E00BD9972 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EFAF565C1824232E00BD9972 /* VolleyInfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VolleyInfoTests-Info.plist"; sourceTree = "<group>"; };
+		EFAF565E1824232E00BD9972 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFAF56601824232E00BD9972 /* VolleyInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VolleyInfoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFAF562F1824232E00BD9972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9731D7184943B700D1C21E /* CoreData.framework in Frameworks */,
+				EFAF56381824232E00BD9972 /* CoreGraphics.framework in Frameworks */,
+				EFAF563A1824232E00BD9972 /* UIKit.framework in Frameworks */,
+				EFAF56361824232E00BD9972 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAF56501824232E00BD9972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAF56551824232E00BD9972 /* XCTest.framework in Frameworks */,
+				EFAF56571824232E00BD9972 /* UIKit.framework in Frameworks */,
+				EFAF56561824232E00BD9972 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF529FA318492035000E6394 /* VolleyInfoFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				EF529FA418492035000E6394 /* VolleyInfoFetcher.h */,
+				EF529FA518492035000E6394 /* VolleyInfoFetcher.m */,
+			);
+			path = VolleyInfoFetcher;
+			sourceTree = "<group>";
+		};
+		EF5AEF95184231EF002FE5D6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EF5AEF9618423230002FE5D6 /* VolleyInfo.xcdatamodeld */,
+				EF529FB0184925D9000E6394 /* Categorie.h */,
+				EF529FB1184925D9000E6394 /* Categorie.m */,
+				EF529FAA18492113000E6394 /* Categorie+create.h */,
+				EF529FAB18492113000E6394 /* Categorie+create.m */,
+				EF0F07C218496ACB00C4DF7E /* Ploeg.h */,
+				EF0F07C318496ACB00C4DF7E /* Ploeg.m */,
+				EF529FAD184921C6000E6394 /* Ploeg+create.h */,
+				EF529FAE184921C6000E6394 /* Ploeg+create.m */,
+				EF529FB3184925D9000E6394 /* Wedstrijd.h */,
+				EF529FB4184925D9000E6394 /* Wedstrijd.m */,
+				EF0F0772184949ED00C4DF7E /* CoreDataTableViewController.h */,
+				EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		EFAF56291824232E00BD9972 = {
+			isa = PBXGroup;
+			children = (
+				EFAF563B1824232E00BD9972 /* VolleyInfo */,
+				EFAF565A1824232E00BD9972 /* VolleyInfoTests */,
+				EFAF56341824232E00BD9972 /* Frameworks */,
+				EFAF56331824232E00BD9972 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFAF56331824232E00BD9972 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF56321824232E00BD9972 /* VolleyInfo.app */,
+				EFAF56531824232E00BD9972 /* VolleyInfoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFAF56341824232E00BD9972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF9731D6184943B700D1C21E /* CoreData.framework */,
+				EFAF56351824232E00BD9972 /* Foundation.framework */,
+				EFAF56371824232E00BD9972 /* CoreGraphics.framework */,
+				EFAF56391824232E00BD9972 /* UIKit.framework */,
+				EFAF56541824232E00BD9972 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFAF563B1824232E00BD9972 /* VolleyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF56471824232E00BD9972 /* Main.storyboard */,
+				EF0F077518494AC000C4DF7E /* FavorietePloegenCDTVC.h */,
+				EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */,
+				EF0F07C518496F2D00C4DF7E /* CategorienCDTVC.h */,
+				EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */,
+				EF7AEDC91849F49A000D1C9B /* PloegenVoorCategorieCDTVC.h */,
+				EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */,
+				EF7AEDCC184A373C000D1C9B /* KlassementViewController.h */,
+				EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */,
+				EF5AEF95184231EF002FE5D6 /* CoreData */,
+				EF529FA318492035000E6394 /* VolleyInfoFetcher */,
+				EFAF563C1824232E00BD9972 /* Supporting Files */,
+				EFAF564D1824232E00BD9972 /* Images.xcassets */,
+			);
+			path = VolleyInfo;
+			sourceTree = "<group>";
+		};
+		EFAF563C1824232E00BD9972 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF56441824232E00BD9972 /* AppDelegate.h */,
+				EFAF56451824232E00BD9972 /* AppDelegate.m */,
+				EFAF563D1824232E00BD9972 /* VolleyInfo-Info.plist */,
+				EFAF563E1824232E00BD9972 /* InfoPlist.strings */,
+				EFAF56411824232E00BD9972 /* main.m */,
+				EFAF56431824232E00BD9972 /* VolleyInfo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFAF565A1824232E00BD9972 /* VolleyInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF56601824232E00BD9972 /* VolleyInfoTests.m */,
+				EFAF565B1824232E00BD9972 /* Supporting Files */,
+			);
+			path = VolleyInfoTests;
+			sourceTree = "<group>";
+		};
+		EFAF565B1824232E00BD9972 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF565C1824232E00BD9972 /* VolleyInfoTests-Info.plist */,
+				EFAF565D1824232E00BD9972 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFAF56311824232E00BD9972 /* VolleyInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAF56641824232E00BD9972 /* Build configuration list for PBXNativeTarget "VolleyInfo" */;
+			buildPhases = (
+				EFAF562E1824232E00BD9972 /* Sources */,
+				EFAF562F1824232E00BD9972 /* Frameworks */,
+				EFAF56301824232E00BD9972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolleyInfo;
+			productName = VolleyInfo;
+			productReference = EFAF56321824232E00BD9972 /* VolleyInfo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFAF56521824232E00BD9972 /* VolleyInfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAF56671824232E00BD9972 /* Build configuration list for PBXNativeTarget "VolleyInfoTests" */;
+			buildPhases = (
+				EFAF564F1824232E00BD9972 /* Sources */,
+				EFAF56501824232E00BD9972 /* Frameworks */,
+				EFAF56511824232E00BD9972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFAF56591824232E00BD9972 /* PBXTargetDependency */,
+			);
+			name = VolleyInfoTests;
+			productName = VolleyInfoTests;
+			productReference = EFAF56531824232E00BD9972 /* VolleyInfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFAF562A1824232E00BD9972 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jelte Liekens";
+				TargetAttributes = {
+					EFAF56311824232E00BD9972 = {
+						DevelopmentTeam = U5WZ77576F;
+					};
+					EFAF56521824232E00BD9972 = {
+						TestTargetID = EFAF56311824232E00BD9972;
+					};
+				};
+			};
+			buildConfigurationList = EFAF562D1824232E00BD9972 /* Build configuration list for PBXProject "VolleyInfo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFAF56291824232E00BD9972;
+			productRefGroup = EFAF56331824232E00BD9972 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFAF56311824232E00BD9972 /* VolleyInfo */,
+				EFAF56521824232E00BD9972 /* VolleyInfoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFAF56301824232E00BD9972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAF564E1824232E00BD9972 /* Images.xcassets in Resources */,
+				EFAF56401824232E00BD9972 /* InfoPlist.strings in Resources */,
+				EFAF56491824232E00BD9972 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAF56511824232E00BD9972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAF565F1824232E00BD9972 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFAF562E1824232E00BD9972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF529FAF184921C6000E6394 /* Ploeg+create.m in Sources */,
+				EFAF56461824232E00BD9972 /* AppDelegate.m in Sources */,
+				EF7AEDCB1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m in Sources */,
+				EFAF56421824232E00BD9972 /* main.m in Sources */,
+				EF0F0774184949ED00C4DF7E /* CoreDataTableViewController.m in Sources */,
+				EF0F07C418496ACB00C4DF7E /* Ploeg.m in Sources */,
+				EF529FB2184925D9000E6394 /* Categorie.m in Sources */,
+				EF7AEDCE184A373C000D1C9B /* KlassementViewController.m in Sources */,
+				EF529FB5184925D9000E6394 /* Wedstrijd.m in Sources */,
+				EF5AEF9818423230002FE5D6 /* VolleyInfo.xcdatamodeld in Sources */,
+				EF0F077718494AC000C4DF7E /* FavorietePloegenCDTVC.m in Sources */,
+				EF0F07C718496F2D00C4DF7E /* CategorienCDTVC.m in Sources */,
+				EF529FA618492035000E6394 /* VolleyInfoFetcher.m in Sources */,
+				EF529FAC18492113000E6394 /* Categorie+create.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAF564F1824232E00BD9972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAF56611824232E00BD9972 /* VolleyInfoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFAF56591824232E00BD9972 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFAF56311824232E00BD9972 /* VolleyInfo */;
+			targetProxy = EFAF56581824232E00BD9972 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFAF563E1824232E00BD9972 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFAF563F1824232E00BD9972 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EFAF56471824232E00BD9972 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFAF56481824232E00BD9972 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFAF565D1824232E00BD9972 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFAF565E1824232E00BD9972 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFAF56621824232E00BD9972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFAF56631824232E00BD9972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFAF56651824232E00BD9972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolleyInfo/VolleyInfo-Prefix.pch";
+				INFOPLIST_FILE = "VolleyInfo/VolleyInfo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EFAF56661824232E00BD9972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolleyInfo/VolleyInfo-Prefix.pch";
+				INFOPLIST_FILE = "VolleyInfo/VolleyInfo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EFAF56681824232E00BD9972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VolleyInfo.app/VolleyInfo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolleyInfo/VolleyInfo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VolleyInfoTests/VolleyInfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EFAF56691824232E00BD9972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VolleyInfo.app/VolleyInfo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolleyInfo/VolleyInfo-Prefix.pch";
+				INFOPLIST_FILE = "VolleyInfoTests/VolleyInfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFAF562D1824232E00BD9972 /* Build configuration list for PBXProject "VolleyInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAF56621824232E00BD9972 /* Debug */,
+				EFAF56631824232E00BD9972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFAF56641824232E00BD9972 /* Build configuration list for PBXNativeTarget "VolleyInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAF56651824232E00BD9972 /* Debug */,
+				EFAF56661824232E00BD9972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFAF56671824232E00BD9972 /* Build configuration list for PBXNativeTarget "VolleyInfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAF56681824232E00BD9972 /* Debug */,
+				EFAF56691824232E00BD9972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF5AEF9618423230002FE5D6 /* VolleyInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF5AEF9718423230002FE5D6 /* VolleyInfo.xcdatamodel */,
+			);
+			currentVersion = EF5AEF9718423230002FE5D6 /* VolleyInfo.xcdatamodel */;
+			path = VolleyInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EFAF562A1824232E00BD9972 /* Project object */;
+}

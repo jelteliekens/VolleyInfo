@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Categorie" representedClassName="Categorie" syncable="YES">
+        <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sort" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uniek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="ploegen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ploeg" inverseName="categorie" inverseEntity="Ploeg" syncable="YES"/>
+    </entity>
+    <entity name="Ploeg" representedClassName="Ploeg" syncable="YES">
+        <attribute name="isfavoriet" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="niveau" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortnaam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="categorie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categorie" inverseName="ploegen" inverseEntity="Categorie" syncable="YES"/>
+        <relationship name="wedstrijden" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Wedstrijd" inverseName="ploeg" inverseEntity="Wedstrijd" syncable="YES"/>
+    </entity>
+    <entity name="Wedstrijd" representedClassName="Wedstrijd" syncable="YES">
+        <attribute name="ishome" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="moment" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="resultaat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sporthal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tegenstander" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="wedstrijdnr" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ploeg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ploeg" inverseName="wedstrijden" inverseEntity="Ploeg" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Categorie" positionX="-801" positionY="-283" width="126" height="103"/>
+        <element name="Ploeg" positionX="-819" positionY="-126" width="126" height="148"/>
+        <element name="Wedstrijd" positionX="-596" positionY="-153" width="128" height="178"/>
+    </elements>
+</model>
