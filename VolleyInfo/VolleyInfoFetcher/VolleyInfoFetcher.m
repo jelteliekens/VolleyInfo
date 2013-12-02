@@ -26,37 +26,37 @@
 
 + (NSArray *) getCategorien {
     
-    NSString *request = @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=categorie";
+    NSString *request = @"http://mendo.be/api/?action=categorie";
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
 + (NSDictionary *) getCategorieMetId: (NSUInteger) categorieId {
-    NSString *request = [NSString stringWithFormat: @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=categorie&id=%lu", (unsigned long)categorieId];
+    NSString *request = [NSString stringWithFormat: @"http://mendo.be/api/?action=categorie&id=%lu", (unsigned long)categorieId];
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
 + (NSArray *) getPloegen {
-    NSString *request = @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=ploeg";
+    NSString *request = @"http://mendo.be/api/?action=ploeg";
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
 + (NSDictionary *) getPloegMetId: (NSUInteger) ploegId {
-    NSString *request = [NSString stringWithFormat: @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=ploeg&id=%lu", (unsigned long)ploegId];
+    NSString *request = [NSString stringWithFormat: @"http://mendo.be/api/?action=ploeg&id=%lu", (unsigned long)ploegId];
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
 + (NSArray *) getWedstrijden {
-    NSString *request = @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=wedstrijd";
+    NSString *request = @"http://mendo.be/api/?action=wedstrijd";
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
 + (NSDictionary *) getWedstrijdMetId: (NSUInteger) wedstrijdId {
-    NSString *request = [NSString stringWithFormat: @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=wedstrijd&wid=%lu", (unsigned long)wedstrijdId];
+    NSString *request = [NSString stringWithFormat: @"http://mendo.be/api/?action=wedstrijd&wid=%lu", (unsigned long)wedstrijdId];
     return [[self executeFlickrFetch:request] valueForKeyPath:@"result"];
 }
 
 + (NSArray *) getWedstrijdenVanPloeg: (NSUInteger) ploegId {
-    NSString *request = [NSString stringWithFormat: @"https://r0430078.webontwerp.khleuven.be/mendoapi/?action=wedstrijd&pid=%lu", (unsigned long)ploegId];
+    NSString *request = [NSString stringWithFormat: @"http://mendo.be/api/?action=wedstrijd&pid=%lu", (unsigned long)ploegId];
     return [[self executeFlickrFetch:request] valueForKey:@"result"];
 }
 
