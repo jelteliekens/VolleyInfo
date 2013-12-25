@@ -2,7 +2,7 @@
 //  Wedstrijd.m
 //  VolleyInfo
 //
-//  Created by Jelte Liekens on 29/11/13.
+//  Created by Jelte Liekens on 13/12/13.
 //  Copyright (c) 2013 Jelte Liekens. All rights reserved.
 //
 
@@ -12,14 +12,13 @@
 
 @implementation Wedstrijd
 
-@dynamic datum;
-@dynamic uniek;
 @dynamic ishome;
+@dynamic moment;
 @dynamic resultaat;
 @dynamic sporthal;
 @dynamic tegenstander;
 @dynamic type;
-@dynamic uur;
+@dynamic uniek;
 @dynamic wedstrijdnr;
 @dynamic ploeg;
 

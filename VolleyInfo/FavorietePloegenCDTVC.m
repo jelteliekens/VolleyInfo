@@ -11,7 +11,9 @@
 #include "VolleyInfoFetcher.h"
 #include "Categorie+create.h"
 #include "Ploeg+create.h"
+#include "Wedstrijd+create.h"
 #include "CategorienCDTVC.h"
+#include "KalenderCDTVC.h"
 
 @interface FavorietePloegenCDTVC ()
 
@@ -79,6 +81,25 @@
                                                                               withObject:self.managedObjectContext];
             }
         }
+    } else if ([sender isKindOfClass:[UITableViewCell class]]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        if ([segue.identifier isEqualToString:@"favorietDetail"]) {
+            
+            
+            UITabBarController *tabbar = segue.destinationViewController;
+            UIViewController *controller = [[[tabbar viewControllers] objectAtIndex:0] visibleViewController];
+            
+            if ([controller isKindOfClass:[KalenderCDTVC class]]) {
+                KalenderCDTVC * kalender = (KalenderCDTVC *)controller;
+                if ([kalender respondsToSelector:@selector(setPloeg:)]) {
+                    [kalender performSelector:@selector(setPloeg:)
+                                   withObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+                }
+            }
+            
+        }
     }
 }
 
@@ -88,6 +109,8 @@
         
         Ploeg * ploeg = [self.fetchedResultsController objectAtIndexPath:indexPath];
         ploeg.isfavoriet = [NSNumber numberWithBool:NO];
+        
+        [Wedstrijd deleteWedstrijdenVoorPloeg:ploeg inManagedObjectContext:self.managedObjectContext];
         
         NSError *error;
         if (![self.managedObjectContext save:&error]) {
@@ -130,7 +153,7 @@
 - (IBAction)refresh
 {
     [self.refreshControl beginRefreshing];
-    dispatch_queue_t fetchQ = dispatch_queue_create("VolleyInfoFetch", NULL);
+    dispatch_queue_t fetchQ = dispatch_queue_create("Fetch Ploegen en categorieen", NULL);
     dispatch_async(fetchQ, ^{
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -140,12 +163,12 @@
         
         [self.managedObjectContext performBlock:^{
             
-            for (NSDictionary *categorie in categorien) {
-                [Categorie categorieMetInfo:categorie inManagedObjectContext:self.managedObjectContext];
+            for (NSDictionary *categorieDict in categorien) {
+                [Categorie categorieMetInfo:categorieDict inManagedObjectContext:self.managedObjectContext];
             }
             
-            for (NSDictionary *ploeg in ploegen) {
-                [Ploeg ploegMetInfo:ploeg inManagedObjectContext:self.managedObjectContext];
+            for (NSDictionary *ploegDict in ploegen) {
+                [Ploeg ploegMetInfo:ploegDict inManagedObjectContext:self.managedObjectContext];
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{

@@ -8,6 +8,7 @@
 
 #import "PloegenVoorCategorieCDTVC.h"
 #import "Ploeg.h"
+#import "Wedstrijd+create.h"
 
 @interface PloegenVoorCategorieCDTVC ()
 
@@ -44,7 +45,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ploegenPerCategorie" forIndexPath:indexPath];
     
     Ploeg * ploeg = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", ploeg.naam, ploeg.niveau];
+    
+    NSString * labelText = ploeg.naam;
+    if ([ploeg.niveau length] > 0) {
+        labelText = [labelText stringByAppendingString:[NSString stringWithFormat:@" (%@)",ploeg.niveau]];
+    }
+    cell.textLabel.text = labelText;
     
     if ([ploeg.isfavoriet boolValue]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -64,6 +70,13 @@
     }else {
         cell.accessoryType = UITableViewCellAccessoryNone;
         ploeg.isfavoriet = [NSNumber numberWithBool:NO];
+        
+        [Wedstrijd deleteWedstrijdenVoorPloeg:ploeg inManagedObjectContext:self.categorie.managedObjectContext];
+    }
+    
+    NSError *error;
+    if (![self.categorie.managedObjectContext save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
 }
 

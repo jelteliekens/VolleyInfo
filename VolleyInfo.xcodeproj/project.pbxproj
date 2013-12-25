@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF0F0774184949ED00C4DF7E /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */; };
 		EF0F077718494AC000C4DF7E /* FavorietePloegenCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */; };
 		EF0F07C418496ACB00C4DF7E /* Ploeg.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F07C318496ACB00C4DF7E /* Ploeg.m */; };
 		EF0F07C718496F2D00C4DF7E /* CategorienCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */; };
@@ -15,10 +14,14 @@
 		EF529FAC18492113000E6394 /* Categorie+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FAB18492113000E6394 /* Categorie+create.m */; };
 		EF529FAF184921C6000E6394 /* Ploeg+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FAE184921C6000E6394 /* Ploeg+create.m */; };
 		EF529FB2184925D9000E6394 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FB1184925D9000E6394 /* Categorie.m */; };
-		EF529FB5184925D9000E6394 /* Wedstrijd.m in Sources */ = {isa = PBXBuildFile; fileRef = EF529FB4184925D9000E6394 /* Wedstrijd.m */; };
 		EF5AEF9818423230002FE5D6 /* VolleyInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5AEF9618423230002FE5D6 /* VolleyInfo.xcdatamodeld */; };
+		EF69DE8C185AF479007F4FA5 /* KalenderCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69DE8B185AF478007F4FA5 /* KalenderCDTVC.m */; };
+		EF69DE8F185AF642007F4FA5 /* Wedstrijd+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69DE8E185AF642007F4FA5 /* Wedstrijd+create.m */; };
+		EF76E1A2185B779600D42EF3 /* Wedstrijd.m in Sources */ = {isa = PBXBuildFile; fileRef = EF76E1A1185B779600D42EF3 /* Wedstrijd.m */; };
 		EF7AEDCB1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */; };
 		EF7AEDCE184A373C000D1C9B /* KlassementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */; };
+		EF8D0F891864351B001DEB43 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D0F881864351B001DEB43 /* CoreDataTableViewController.m */; };
+		EF8D0F8C1864399E001DEB43 /* KalenderOverviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8D0F8B1864399E001DEB43 /* KalenderOverviewCell.m */; };
 		EF9731D7184943B700D1C21E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9731D6184943B700D1C21E /* CoreData.framework */; };
 		EFAF56361824232E00BD9972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56351824232E00BD9972 /* Foundation.framework */; };
 		EFAF56381824232E00BD9972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56371824232E00BD9972 /* CoreGraphics.framework */; };
@@ -33,6 +36,7 @@
 		EFAF56571824232E00BD9972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF56391824232E00BD9972 /* UIKit.framework */; };
 		EFAF565F1824232E00BD9972 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFAF565D1824232E00BD9972 /* InfoPlist.strings */; };
 		EFAF56611824232E00BD9972 /* VolleyInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAF56601824232E00BD9972 /* VolleyInfoTests.m */; };
+		EFE1F117186898F400D6D08B /* DetailWedstrijdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F116186898F400D6D08B /* DetailWedstrijdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF0F0772184949ED00C4DF7E /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ../../../Downloads/Photomania/Photomania/CoreDataTableViewController.h; sourceTree = "<group>"; };
-		EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../../../Downloads/Photomania/Photomania/CoreDataTableViewController.m; sourceTree = "<group>"; };
 		EF0F077518494AC000C4DF7E /* FavorietePloegenCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorietePloegenCDTVC.h; sourceTree = "<group>"; };
 		EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorietePloegenCDTVC.m; sourceTree = "<group>"; };
 		EF0F07C218496ACB00C4DF7E /* Ploeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ploeg.h; path = CoreData/Ploeg.h; sourceTree = "<group>"; };
@@ -62,13 +64,21 @@
 		EF529FAE184921C6000E6394 /* Ploeg+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Ploeg+create.m"; path = "CoreData/Ploeg+create.m"; sourceTree = "<group>"; };
 		EF529FB0184925D9000E6394 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Categorie.h; path = CoreData/Categorie.h; sourceTree = "<group>"; };
 		EF529FB1184925D9000E6394 /* Categorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Categorie.m; path = CoreData/Categorie.m; sourceTree = "<group>"; };
-		EF529FB3184925D9000E6394 /* Wedstrijd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wedstrijd.h; path = CoreData/Wedstrijd.h; sourceTree = "<group>"; };
-		EF529FB4184925D9000E6394 /* Wedstrijd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wedstrijd.m; path = CoreData/Wedstrijd.m; sourceTree = "<group>"; };
 		EF5AEF9718423230002FE5D6 /* VolleyInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolleyInfo.xcdatamodel; sourceTree = "<group>"; };
+		EF69DE8A185AF478007F4FA5 /* KalenderCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalenderCDTVC.h; sourceTree = "<group>"; };
+		EF69DE8B185AF478007F4FA5 /* KalenderCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalenderCDTVC.m; sourceTree = "<group>"; };
+		EF69DE8D185AF642007F4FA5 /* Wedstrijd+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Wedstrijd+create.h"; path = "CoreData/Wedstrijd+create.h"; sourceTree = "<group>"; };
+		EF69DE8E185AF642007F4FA5 /* Wedstrijd+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Wedstrijd+create.m"; path = "CoreData/Wedstrijd+create.m"; sourceTree = "<group>"; };
+		EF76E1A0185B779600D42EF3 /* Wedstrijd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wedstrijd.h; path = CoreData/Wedstrijd.h; sourceTree = "<group>"; };
+		EF76E1A1185B779600D42EF3 /* Wedstrijd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wedstrijd.m; path = CoreData/Wedstrijd.m; sourceTree = "<group>"; };
 		EF7AEDC91849F49A000D1C9B /* PloegenVoorCategorieCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PloegenVoorCategorieCDTVC.h; sourceTree = "<group>"; };
 		EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PloegenVoorCategorieCDTVC.m; sourceTree = "<group>"; };
 		EF7AEDCC184A373C000D1C9B /* KlassementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlassementViewController.h; sourceTree = "<group>"; };
 		EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlassementViewController.m; sourceTree = "<group>"; };
+		EF8D0F871864351B001DEB43 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = CoreData/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		EF8D0F881864351B001DEB43 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreData/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		EF8D0F8A1864399E001DEB43 /* KalenderOverviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalenderOverviewCell.h; sourceTree = "<group>"; };
+		EF8D0F8B1864399E001DEB43 /* KalenderOverviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalenderOverviewCell.m; sourceTree = "<group>"; };
 		EF9731D6184943B700D1C21E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EFAF56321824232E00BD9972 /* VolleyInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolleyInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAF56351824232E00BD9972 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +97,8 @@
 		EFAF565C1824232E00BD9972 /* VolleyInfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VolleyInfoTests-Info.plist"; sourceTree = "<group>"; };
 		EFAF565E1824232E00BD9972 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EFAF56601824232E00BD9972 /* VolleyInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VolleyInfoTests.m; sourceTree = "<group>"; };
+		EFE1F115186898F400D6D08B /* DetailWedstrijdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWedstrijdViewController.h; sourceTree = "<group>"; };
+		EFE1F116186898F400D6D08B /* DetailWedstrijdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWedstrijdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +147,12 @@
 				EF0F07C318496ACB00C4DF7E /* Ploeg.m */,
 				EF529FAD184921C6000E6394 /* Ploeg+create.h */,
 				EF529FAE184921C6000E6394 /* Ploeg+create.m */,
-				EF529FB3184925D9000E6394 /* Wedstrijd.h */,
-				EF529FB4184925D9000E6394 /* Wedstrijd.m */,
-				EF0F0772184949ED00C4DF7E /* CoreDataTableViewController.h */,
-				EF0F0773184949ED00C4DF7E /* CoreDataTableViewController.m */,
+				EF76E1A0185B779600D42EF3 /* Wedstrijd.h */,
+				EF76E1A1185B779600D42EF3 /* Wedstrijd.m */,
+				EF69DE8D185AF642007F4FA5 /* Wedstrijd+create.h */,
+				EF69DE8E185AF642007F4FA5 /* Wedstrijd+create.m */,
+				EF8D0F871864351B001DEB43 /* CoreDataTableViewController.h */,
+				EF8D0F881864351B001DEB43 /* CoreDataTableViewController.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -177,15 +191,8 @@
 		EFAF563B1824232E00BD9972 /* VolleyInfo */ = {
 			isa = PBXGroup;
 			children = (
-				EFAF56471824232E00BD9972 /* Main.storyboard */,
-				EF0F077518494AC000C4DF7E /* FavorietePloegenCDTVC.h */,
-				EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */,
-				EF0F07C518496F2D00C4DF7E /* CategorienCDTVC.h */,
-				EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */,
-				EF7AEDC91849F49A000D1C9B /* PloegenVoorCategorieCDTVC.h */,
-				EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */,
-				EF7AEDCC184A373C000D1C9B /* KlassementViewController.h */,
-				EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */,
+				EFE36C141869E7F400058C34 /* Views */,
+				EFE36C131869E7DE00058C34 /* Controllers */,
 				EF5AEF95184231EF002FE5D6 /* CoreData */,
 				EF529FA318492035000E6394 /* VolleyInfoFetcher */,
 				EFAF563C1824232E00BD9972 /* Supporting Files */,
@@ -223,6 +230,35 @@
 				EFAF565D1824232E00BD9972 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFE36C131869E7DE00058C34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF0F077518494AC000C4DF7E /* FavorietePloegenCDTVC.h */,
+				EF0F077618494AC000C4DF7E /* FavorietePloegenCDTVC.m */,
+				EF0F07C518496F2D00C4DF7E /* CategorienCDTVC.h */,
+				EF0F07C618496F2D00C4DF7E /* CategorienCDTVC.m */,
+				EF7AEDC91849F49A000D1C9B /* PloegenVoorCategorieCDTVC.h */,
+				EF7AEDCA1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m */,
+				EF69DE8A185AF478007F4FA5 /* KalenderCDTVC.h */,
+				EF69DE8B185AF478007F4FA5 /* KalenderCDTVC.m */,
+				EF8D0F8A1864399E001DEB43 /* KalenderOverviewCell.h */,
+				EF8D0F8B1864399E001DEB43 /* KalenderOverviewCell.m */,
+				EFE1F115186898F400D6D08B /* DetailWedstrijdViewController.h */,
+				EFE1F116186898F400D6D08B /* DetailWedstrijdViewController.m */,
+				EF7AEDCC184A373C000D1C9B /* KlassementViewController.h */,
+				EF7AEDCD184A373C000D1C9B /* KlassementViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EFE36C141869E7F400058C34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF56471824232E00BD9972 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,15 +363,19 @@
 			files = (
 				EF529FAF184921C6000E6394 /* Ploeg+create.m in Sources */,
 				EFAF56461824232E00BD9972 /* AppDelegate.m in Sources */,
+				EF8D0F891864351B001DEB43 /* CoreDataTableViewController.m in Sources */,
 				EF7AEDCB1849F49A000D1C9B /* PloegenVoorCategorieCDTVC.m in Sources */,
 				EFAF56421824232E00BD9972 /* main.m in Sources */,
-				EF0F0774184949ED00C4DF7E /* CoreDataTableViewController.m in Sources */,
 				EF0F07C418496ACB00C4DF7E /* Ploeg.m in Sources */,
+				EF76E1A2185B779600D42EF3 /* Wedstrijd.m in Sources */,
+				EF8D0F8C1864399E001DEB43 /* KalenderOverviewCell.m in Sources */,
 				EF529FB2184925D9000E6394 /* Categorie.m in Sources */,
+				EF69DE8C185AF479007F4FA5 /* KalenderCDTVC.m in Sources */,
+				EFE1F117186898F400D6D08B /* DetailWedstrijdViewController.m in Sources */,
 				EF7AEDCE184A373C000D1C9B /* KlassementViewController.m in Sources */,
-				EF529FB5184925D9000E6394 /* Wedstrijd.m in Sources */,
 				EF5AEF9818423230002FE5D6 /* VolleyInfo.xcdatamodeld in Sources */,
 				EF0F077718494AC000C4DF7E /* FavorietePloegenCDTVC.m in Sources */,
+				EF69DE8F185AF642007F4FA5 /* Wedstrijd+create.m in Sources */,
 				EF0F07C718496F2D00C4DF7E /* CategorienCDTVC.m in Sources */,
 				EF529FA618492035000E6394 /* VolleyInfoFetcher.m in Sources */,
 				EF529FAC18492113000E6394 /* Categorie+create.m in Sources */,

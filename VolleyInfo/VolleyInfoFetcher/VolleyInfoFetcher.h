@@ -20,7 +20,7 @@
 
 #define WEDSTRIJD_ID @"id"
 #define WEDSTRIJD_IS_HOME @"ishome"
-#define WEDSTRIJD_WEDNR @"wedstrijdnr"
+#define WEDSTRIJD_WEDNR @"wedstrijdnummer"
 #define WEDSTRIJD_RESULTAAT @"resultaat"
 #define WEDSTRIJD_SPORTHAL @"sporthal"
 #define WEDSTRIJD_DATUM @"datum"
