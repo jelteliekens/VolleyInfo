@@ -19,8 +19,8 @@
 -(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
     _managedObjectContext = managedObjectContext;
-        
-    if (managedObjectContext ) {
+            
+    if (managedObjectContext) {
         
         NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Categorie"];
         request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"sort" ascending:YES]];

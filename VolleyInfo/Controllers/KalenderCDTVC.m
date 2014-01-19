@@ -7,10 +7,13 @@
 //
 
 #import "KalenderCDTVC.h"
-#import "Wedstrijd+create.h"
 #import "VolleyInfoFetcher.h"
 #import "KalenderOverviewCell.h"
 #import "DetailWedstrijdViewController.h"
+#import "Wedstrijd+create.h"
+#import "Ploeg+create.h"
+#import "Categorie+create.h"
+#import "FavorietePloegenCDTVC.h"
 
 @interface KalenderCDTVC ()
 
@@ -18,22 +21,37 @@
 
 @implementation KalenderCDTVC
 
+#define PLOEG_ID_PLIST @"PloegId"
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (!self.managedObjectContext) [self useDocument];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self scrollNaarPloeg];
+    [self refreshAlles];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSInteger ploegId = [[NSUserDefaults standardUserDefaults] integerForKey:PLOEG_ID_PLIST];
+    Ploeg *pl =[Ploeg getPloegMetId:ploegId InManagedObjectContext:self.managedObjectContext];
+    self.ploeg = pl;
 }
 
 - (void)setPloeg:(Ploeg *)ploeg
 {
     _ploeg = ploeg;
     [self setupFetchedResultsController];
-    [self refresh];
+    self.title = ploeg.naam;
 }
 
 - (void)setupFetchedResultsController {
     
-    if (self.ploeg.managedObjectContext) {
+    if (self.managedObjectContext) {
         
         NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Wedstrijd"];
         request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"moment" ascending:YES]];
@@ -52,7 +70,7 @@
     return 60;
 }
 
-- (void) scrollNaarPloeg
+- (void) scrollNaarWedstrijd
 {
     [self.tableView scrollToRowAtIndexPath:[self.fetchedResultsController indexPathForObject:[Wedstrijd getVolgendeWedstrijdVoorPloeg:self.ploeg
                                                                                                                inManagedObjectContext:self.ploeg.managedObjectContext]]
@@ -114,29 +132,89 @@
                 [segue.destinationViewController performSelector:@selector(setPloeg:EnWedstrijd:) withObject:self.ploeg withObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
             }
         }
+    } else {
+        if ([segue.identifier isEqualToString:@"kiesFavoriet"]) {
+            FavorietePloegenCDTVC *controller = (FavorietePloegenCDTVC *)[segue.destinationViewController visibleViewController];
+            controller.managedObjectContext = self.managedObjectContext;
+        }
     }
 }
 
-- (void) refresh
+
+-(void) useDocument
 {
-    dispatch_queue_t fetchQ = dispatch_queue_create("Fetch wedstrijden", NULL);
+    NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    url = [url URLByAppendingPathComponent:@"SQLiteDocument"];
+    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[url path]]) {
+        [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            if (success) {
+                self.managedObjectContext = document.managedObjectContext;
+                [self refreshAlles];
+            }
+        }];
+        
+    } else if (document.documentState == UIDocumentStateClosed) {
+        [document openWithCompletionHandler:^(BOOL success) {
+            if (success) {
+                self.managedObjectContext = document.managedObjectContext;
+            }
+        }];
+    } else {
+        self.managedObjectContext = document.managedObjectContext;
+    }
+}
+
+- (IBAction)refreshAlles
+{
+    [self.refreshControl beginRefreshing];
+    dispatch_queue_t fetchQ = dispatch_queue_create("Fetch Ploegen en categorieen", NULL);
     dispatch_async(fetchQ, ^{
         
+        NSMutableDictionary *alleWedstrijden = [[NSMutableDictionary alloc] init];
+        
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        NSArray *wedstrijden = [VolleyInfoFetcher getWedstrijdenVanPloeg: [self.ploeg.uniek integerValue]];
+        NSArray *categorien = [VolleyInfoFetcher getCategorien];
+        NSArray *ploegen = [VolleyInfoFetcher getPloegen];
+        for (Ploeg *ploeg in [Ploeg getFavorietePloegenInManagedObjectContext:self.managedObjectContext]) {
+            NSArray *test = [VolleyInfoFetcher getWedstrijdenVanPloeg: [ploeg.uniek integerValue]];
+            [alleWedstrijden setObject:test forKey:ploeg.uniek];
+        }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        [self.ploeg.managedObjectContext performBlock:^{
+        [self.managedObjectContext performBlock:^{
             
-            for (NSDictionary *wedstrijd in wedstrijden) {
-                [Wedstrijd wedstrijdMetInfo:wedstrijd voorPloeg:self.ploeg inManagedObjectContext:self.ploeg.managedObjectContext];
+            for (NSDictionary *categorieDict in categorien) {
+                [Categorie addCategorieMetInfo:categorieDict inManagedObjectContext:self.managedObjectContext];
+            }
+            
+            for (NSDictionary *ploegDict in ploegen) {
+                [Ploeg addPloegMetInfo:ploegDict inManagedObjectContext:self.managedObjectContext];
+            }
+            
+            for (NSString* ploegId in [alleWedstrijden allKeys]) {
+                for (NSDictionary *wedstrijd in [alleWedstrijden objectForKey:ploegId]) {
+                    [Wedstrijd addWedstrijdMetInfo:wedstrijd voorPloeg:[Ploeg getPloegMetId:[ploegId integerValue] InManagedObjectContext:self.managedObjectContext] inManagedObjectContext:self.managedObjectContext];
+                }
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                //[self scrollNaarPloeg];
+                [self.refreshControl endRefreshing];
             });
         }];
     });
+}
+
+
+- (IBAction)favorietePloegGekozen:(UIStoryboardSegue*)segue
+{
+    [self scrollNaarWedstrijd];
+    
+    NSInteger ploegId = [[NSUserDefaults standardUserDefaults] integerForKey:PLOEG_ID_PLIST];
+    ploegId = [self.ploeg.uniek integerValue];
+    [[NSUserDefaults standardUserDefaults] setInteger:ploegId forKey:PLOEG_ID_PLIST];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

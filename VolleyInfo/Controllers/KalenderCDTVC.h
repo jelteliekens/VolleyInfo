@@ -12,5 +12,8 @@
 @interface KalenderCDTVC : CoreDataTableViewController
 
 @property (nonatomic, strong) Ploeg * ploeg;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+- (IBAction)favorietePloegGekozen:(UIStoryboardSegue *)segue;
 
 @end

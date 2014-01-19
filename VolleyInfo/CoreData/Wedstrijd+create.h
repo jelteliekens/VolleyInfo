@@ -10,7 +10,7 @@
 
 @interface Wedstrijd (create)
 
-+ (Wedstrijd *)wedstrijdMetInfo:(NSDictionary *) wedstrijdDictionary
++ (Wedstrijd *) addWedstrijdMetInfo:(NSDictionary *) wedstrijdDictionary
                  voorPloeg:(Ploeg *) ploeg
        inManagedObjectContext:(NSManagedObjectContext *)context;
 

@@ -10,10 +10,10 @@
 
 @interface Categorie (create)
 
-+ (Categorie *)categorieMetInfo:(NSDictionary *)categorieDictionary
++ (Categorie *)addCategorieMetInfo:(NSDictionary *)categorieDictionary
          inManagedObjectContext:(NSManagedObjectContext *)context;
 
-+ (Categorie *)categorieMetID:(NSInteger) categorieId
++ (Categorie *)getCategorieMetId:(NSUInteger) categorieId
          inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

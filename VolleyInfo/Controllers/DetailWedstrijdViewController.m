@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *momentLabel;
 @property (strong, nonatomic) IBOutlet UILabel *resultaatLabel;
 @property (strong, nonatomic) IBOutlet UILabel *typeLabel;
+@property (strong, nonatomic) IBOutlet UISwitch *meldingSwitch;
 
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) UIBarButtonItem *directionBtn;
@@ -84,6 +85,18 @@
         self.typeLabel.text = self.wedstrijd.type;
     } else {
         self.typeLabel.text = @"/";
+    }
+    
+    if ([self findNotificationWithWedstrijdId:self.wedstrijd.uniek] == nil) {
+        self.meldingSwitch.on = NO;
+    } else {
+        self.meldingSwitch.on = YES;
+    }
+    
+    if ([self.wedstrijd.moment compare:[NSDate date]] == NSOrderedDescending) {
+        self.meldingSwitch.enabled = YES;
+    } else {
+        self.meldingSwitch.enabled = NO;
     }
 }
 
@@ -159,10 +172,71 @@
     return view;
 }
 
--(void) getRoute
+- (void) getRoute
 {
     NSDictionary *options = @{MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving};
     [self.sporthalItem openInMapsWithLaunchOptions:options];
+}
+
+- (IBAction)toggleMelding {
+    if (self.meldingSwitch.on) {
+        [self addNotificatie];
+    } else {
+        [self deleteNotificatie];
+    }
+}
+
+#define intervalMin 30
+
+- (void) addNotificatie
+{
+    NSDate *date = [NSDate dateWithTimeInterval:-(intervalMin * 60) sinceDate:self.wedstrijd.moment];
+    
+    NSString * ploeg1 = [[NSString alloc] init];
+    NSString * ploeg2 = [[NSString alloc] init];
+    
+    if ([self.wedstrijd.ishome boolValue]) {
+        ploeg1 = self.ploeg.naam;
+        ploeg2 = self.wedstrijd.tegenstander;
+    } else {
+        ploeg1 = self.wedstrijd.tegenstander;
+        ploeg2 = self.ploeg.naam;
+    }
+    NSString *body = [ploeg1 stringByAppendingString:[NSString stringWithFormat:@" - %@ begint over %i minuten", ploeg2, intervalMin]];
+    
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = date;
+    localNotification.alertBody = body;
+    localNotification.alertAction = @"Bekijken";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.userInfo = @{@"wid": self.wedstrijd.uniek, @"pid": self.ploeg.uniek };
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+- (void) deleteNotificatie
+{
+    UILocalNotification *not = [self findNotificationWithWedstrijdId:self.wedstrijd.uniek];
+    if (not != nil) {
+        [[UIApplication sharedApplication] cancelLocalNotification: not];
+    }
+}
+
+- (UILocalNotification *) findNotificationWithWedstrijdId:(NSNumber *) uniek {
+    UILocalNotification *notification = nil;
+    
+    for (UILocalNotification *event in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        NSDictionary *userInfoCurrent = event.userInfo;
+        
+        if ([[userInfoCurrent valueForKey:@"wid"] intValue] == [uniek intValue]) {
+            notification = event;
+            break;
+        }
+    }
+    
+    return notification;
 }
 
 @end

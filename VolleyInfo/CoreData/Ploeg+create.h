@@ -10,7 +10,11 @@
 
 @interface Ploeg (create)
 
-+ (Ploeg *)ploegMetInfo:(NSDictionary *)ploegDictionary
++ (Ploeg *)addPloegMetInfo:(NSDictionary *)ploegDictionary
         inManagedObjectContext:(NSManagedObjectContext *)context;
+
++ (Ploeg *) getPloegMetId:(NSUInteger)ploegId InManagedObjectContext: (NSManagedObjectContext *)context;
+
++ (NSArray *) getFavorietePloegenInManagedObjectContext: (NSManagedObjectContext *)context;
 
 @end
